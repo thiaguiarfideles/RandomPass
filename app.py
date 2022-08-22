@@ -19,5 +19,6 @@ def password_func():
     generated = password.password_gen(inputQuery1)
     
     return render_template('index.html', output1=generated, query1 = request.form['query1'])
-
-app.run('localhost', 9090)
+if __name__ == "__main__":
+	port = int(os.environ.get("PORT", 5000))
+	app.run(host='0.0.0.0', port=port)
