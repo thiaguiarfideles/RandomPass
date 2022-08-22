@@ -20,4 +20,4 @@ def password_func():
     
     return render_template('index.html', output1=generated, query1 = request.form['query1'])
 
-app.run('localhost', 8081)
+app.run(debug=True)
