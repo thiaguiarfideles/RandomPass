@@ -3,7 +3,7 @@ import string
 def password_gen(length, charset=None):
 
     if not charset:
-        charset = string.ascii_letters + string.digits + "@!"
+        charset = string.ascii_letters + string.digits + "?%,.'#%&( )-"
     password = "".join(random.choices(charset, k=int(length)))
     return password
 
